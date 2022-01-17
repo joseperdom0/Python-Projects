@@ -21,7 +21,6 @@ password = []
 for _ in range(nr_letters):
     selected_character = random.choice(letters)
     password.append(selected_character)
-
 for _ in range(nr_numbers):
     selected_character = random.choice(numbers)
     password.append(selected_character)
