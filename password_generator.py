@@ -16,22 +16,21 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 mapping = [[letters], [numbers], [symbols]]
 total_characters = nr_letters + nr_symbols + nr_numbers
-password = ""
+password = []
 
 for _ in range(nr_letters):
     selected_character = random.choice(letters)
-    password += selected_character
+    password.append(selected_character)
 
 for _ in range(nr_numbers):
     selected_character = random.choice(numbers)
-    password += selected_character
+    password.append(selected_character)
 for _ in range(nr_symbols):
     selected_character = random.choice(symbols)
-    password += selected_character
+    password.append(selected_character)
 
-pass_list = list(password)
-random.shuffle(pass_list)
-shuffled_password = ''.join(pass_list)
+random.shuffle(password)
+shuffled_password = ''.join(password)
 print(shuffled_password)
 # pyperclip.copy(shuffled_password)
 # print("Generated password copied to clipboard.")
