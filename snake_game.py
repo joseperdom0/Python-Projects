@@ -1,6 +1,7 @@
 from turtle import Screen, Turtle
 import time
 
+#testing
 STARTING_POSITIONS = [(0,0),(20,0),(40,0)]
 MOVE_DISTANCE = 20
 REFRESH_RATE = 0.3
