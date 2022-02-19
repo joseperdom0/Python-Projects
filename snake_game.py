@@ -1,7 +1,6 @@
 from turtle import Screen, Turtle
 import time
 
-#testing
 STARTING_POSITIONS = [(0,0),(20,0),(40,0)]
 MOVE_DISTANCE = 20
 REFRESH_RATE = 0.3
@@ -28,6 +27,19 @@ class Snake:
             self.segments[segment].goto(coord_x, coord_y)
         self.segments[0].forward(MOVE_DISTANCE)
 
+    def up(self):
+        self.segments[0].setheading(90)
+
+    def down(self):
+        self.segments[0].setheading(270)
+
+    def right(self):
+        self.segments[0].setheading(0)
+
+    def left(self):
+        self.segments[0].setheading(180)
+
+
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
@@ -50,7 +62,11 @@ screen.tracer(0)
 
 
 snake = Snake()
-
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
 
 game_is_on = True
 
