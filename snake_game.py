@@ -1,9 +1,10 @@
+import random
 from turtle import Screen, Turtle
 import time
 
 STARTING_POSITIONS = [(0,0),(20,0),(40,0)]
 MOVE_DISTANCE = 20
-REFRESH_RATE = 0.3
+REFRESH_RATE = 0.1
 UP = 90
 DOWN = 270
 LEFT = 180
@@ -49,6 +50,18 @@ class Snake:
             self.head.setheading(LEFT)
 
 
+class Food(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.shape("turtle")
+        self.penup()
+        self.speed("fastest")
+        self.color("white")
+        random_x = random.randint(-280,280)
+        random_y = random.randint(-280, 280)
+        self.goto(random_x, random_y)
+
+
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
@@ -71,6 +84,7 @@ screen.tracer(0)
 
 
 snake = Snake()
+food = Food()
 screen.listen()
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
