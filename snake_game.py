@@ -9,7 +9,7 @@ UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
-
+FONT = ("Courier", 24, "normal")
 
 class Snake:
     def __init__(self):
@@ -71,14 +71,19 @@ class Scoreboard(Turtle):
 
     def display_score(self):
         self.clear()
-        self.goto(0, 280)
+        self.goto(0, 260)
         self.color("white")
         self.hideturtle()
-        self.write(f"Score = {self.score}", False, align="center")
+        self.write(f"Score = {self.score}", False, align="center", font = FONT)
 
     def increase_score(self):
         self.score += 1
         self.display_score()
+
+    def game_over(self):
+        self.clear()
+        self.goto(0, 0)
+        self.write("GAME OVER", False, align="center", font= FONT)
 
 
 screen = Screen()
@@ -122,4 +127,8 @@ while game_is_on:
         scoreboard.increase_score()
         print(scoreboard.score)
         food.spawn()
+
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        game_is_on = False
+        scoreboard.game_over()
 screen.exitonclick()
