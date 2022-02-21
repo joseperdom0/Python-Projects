@@ -4,7 +4,7 @@ import time
 
 STARTING_POSITIONS = [(0,0),(20,0),(40,0)]
 MOVE_DISTANCE = 20
-REFRESH_RATE = 0.05
+REFRESH_RATE = 0.1
 UP = 90
 DOWN = 270
 LEFT = 180
@@ -19,12 +19,8 @@ class Snake:
 
     def create_snake(self):
         for position in STARTING_POSITIONS:
-            new_tail = Turtle()
-            new_tail.shape("square")
-            new_tail.color("white")
-            new_tail.penup()
-            new_tail.goto(position)
-            self.segments.append(new_tail)
+            self.add_segment(position)
+
 
     def move(self):
         for segment in range(len(self.segments) - 1, 0, -1):
@@ -32,6 +28,17 @@ class Snake:
             coord_y = self.segments[segment - 1].ycor()
             self.segments[segment].goto(coord_x, coord_y)
         self.head.forward(MOVE_DISTANCE)
+
+    def add_segment(self, position):
+        new_tail = Turtle()
+        new_tail.shape("square")
+        new_tail.color("white")
+        new_tail.penup()
+        new_tail.goto(position)
+        self.segments.append(new_tail)
+
+    def extend(self):
+        self.add_segment(self.segments[-1].position())
 
     def up(self):
         if self.head.heading() != DOWN:
@@ -127,6 +134,7 @@ while game_is_on:
         scoreboard.increase_score()
         print(scoreboard.score)
         food.spawn()
+        snake.extend()
 
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         game_is_on = False
