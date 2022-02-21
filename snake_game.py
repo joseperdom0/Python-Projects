@@ -63,6 +63,23 @@ class Food(Turtle):
         random_y = random.randint(-280, 280)
         self.goto(random_x, random_y)
 
+class Scoreboard(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.score = 0
+        self.display_score()
+
+    def display_score(self):
+        self.clear()
+        self.goto(0, 280)
+        self.color("white")
+        self.hideturtle()
+        self.write(f"Score = {self.score}", False, align="center")
+
+    def increase_score(self):
+        self.score += 1
+        self.display_score()
+
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -87,6 +104,8 @@ screen.tracer(0)
 
 snake = Snake()
 food = Food()
+scoreboard = Scoreboard()
+
 screen.listen()
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
@@ -100,6 +119,7 @@ while game_is_on:
     time.sleep(REFRESH_RATE)
     screen.update()
     if snake.head.distance(food) < 15:
-        print("eaten")
+        scoreboard.increase_score()
+        print(scoreboard.score)
         food.spawn()
 screen.exitonclick()
