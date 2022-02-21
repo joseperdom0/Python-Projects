@@ -4,7 +4,7 @@ import time
 
 STARTING_POSITIONS = [(0,0),(20,0),(40,0)]
 MOVE_DISTANCE = 20
-REFRESH_RATE = 0.1
+REFRESH_RATE = 0.05
 UP = 90
 DOWN = 270
 LEFT = 180
@@ -57,6 +57,8 @@ class Food(Turtle):
         self.penup()
         self.speed("fastest")
         self.color("white")
+
+    def spawn(self):
         random_x = random.randint(-280,280)
         random_y = random.randint(-280, 280)
         self.goto(random_x, random_y)
@@ -97,4 +99,7 @@ while game_is_on:
     snake.move()
     time.sleep(REFRESH_RATE)
     screen.update()
+    if snake.head.distance(food) < 15:
+        print("eaten")
+        food.spawn()
 screen.exitonclick()
