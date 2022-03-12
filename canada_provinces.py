@@ -6,4 +6,3 @@ screen.addshape(image)
 turtle.shape(image)
 
 answer_province = screen.textinput(title="Guess the Province",prompt="Type the Province name:")
- 
