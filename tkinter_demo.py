@@ -9,5 +9,25 @@ label1 = tkinter.Label(text="I am a label", font=("Arial",24, "italic"))
 #label1.pack()
 
 # situates left
-label1.pack(side="left")
+label1.pack()
+label1.config(text="This new text")
+label1["text"] = "latest text!"
+
+# Button
+
+
+def button_got_clicked():
+    label1["text"] = input.get()
+
+
+button1 = tkinter.Button(text="Click me!",command=button_got_clicked)
+button1.pack()
+
+# entry
+
+input = tkinter.Entry()
+input.pack()
+
+
+
 window.mainloop()
