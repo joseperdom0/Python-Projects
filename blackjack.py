@@ -79,7 +79,8 @@ Blackjack|  |  || \ / || ( ) ||A_ _ |
 
 new_game()
 #user_cards = [11,3]
-if is_blackjack(user_cards):print("we got 11")
+if is_blackjack(user_cards):
+    print("we got 11")
     print("User has blackjack")
 if is_blackjack(dealer_cards):
     print("Dealer has blackjack")
