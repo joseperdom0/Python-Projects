@@ -8,13 +8,19 @@ df = pandas.DataFrame(file)
 nato_alphabet = {row.letter: row.code for (index, row) in df.iterrows()}
 print(nato_alphabet)
 
-word = input("Please enter your word to decode: ").upper()
-decoded =  []
-# for char in word:
-#     for (key, value) in nato_alphabet.items():
-#         if char.title() == key:
-#             decoded.append(value)
+def nato():
+    word = input("Please enter your word to decode: ").upper()
+    decoded =  []
+    # for char in word:
+    #     for (key, value) in nato_alphabet.items():
+    #         if char.title() == key:
+    #             decoded.append(value)
+    try:
+        decoded = [nato_alphabet[char] for char in word]
+    except KeyError:
+        print("not found")
+        nato()
+    else:
+        print(decoded)
 
-decoded = [nato_alphabet[char] for char in word]
-
-print(decoded)
+nato()
