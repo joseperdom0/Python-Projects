@@ -1,2 +1,4 @@
-def fahrenheit_to_celsius(fahrenheit):
-    return round(((fahrenheit-32) * 5/9), 3)
+dividend = 10000000000
+divisor = 5
+
+print((int(dividend) / int(divisor)) % 2 != 0)

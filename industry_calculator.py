@@ -1,0 +1,2 @@
+#TODO
+# extract rig values
