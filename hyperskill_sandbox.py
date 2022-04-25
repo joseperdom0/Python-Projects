@@ -1,12 +1,4 @@
-#A = input()
-#B = input()
-#H = input()
-A = 6
-B = 10
-H = 8
-if H < A:
-    print("Deficiency")
-elif H > B:
-    print("Excess")
-else:
-    print("Normal")
+# The string module contains common string operations and constants.
+from string import digits
+
+print(digits)  # prints all the digit symbols
