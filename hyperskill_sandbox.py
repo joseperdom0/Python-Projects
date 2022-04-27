@@ -1,9 +1,12 @@
-# The string module contains common string operations and constants.
-from string import digits
+a = int(input())
+b = int(input())
+h = int(input())
 
-print(digits)  # prints all the digit symbols
+if h > b:
+    print("Excess")
+elif h >= a :
+    print("Normal")
+else :
+    print("Deficiency")
 
-# put your code here
-from string import digits, ascii_lowercase
-print(digits)
-print(ascii_lowercase)
+
