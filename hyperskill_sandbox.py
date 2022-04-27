@@ -1,12 +1,8 @@
-a = int(input())
-b = int(input())
-h = int(input())
+hours = int(input())
 
-if h > b:
-    print("Excess")
-elif h >= a :
-    print("Normal")
-else :
-    print("Deficiency")
-
-
+if hours < 2:
+    print("That's rare nowadays!")
+elif 2 <= hours < 4:
+    print("This seems reasonable")
+else:
+    print("Don't forget to take breaks!")
