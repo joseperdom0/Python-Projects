@@ -1,8 +1,8 @@
-hours = int(input())
+time_diff = int(input())
 
-if hours < 2:
-    print("That's rare nowadays!")
-elif 2 <= hours < 4:
-    print("This seems reasonable")
+if time_diff <= -11:
+    print("Monday")
+elif time_diff >= 14:
+    print("Wednesday")
 else:
-    print("Don't forget to take breaks!")
+    print("Tuesday")
