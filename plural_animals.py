@@ -1,14 +1,3 @@
-# Item: Price
-#
-# Chicken: 23
-#
-# Goat: 678
-#
-# Pig: 1296
-#
-# Cow: 3848
-#
-# Sheep: 6769
 animals = {"sheep": 6769,
            "cow": 3848,
            "pig": 1296,

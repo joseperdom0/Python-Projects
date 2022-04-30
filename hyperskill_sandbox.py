@@ -1,8 +1,10 @@
-time_diff = int(input())
+a = int(input())
+b = int(input())
 
-if time_diff <= -11:
-    print("Monday")
-elif time_diff >= 14:
-    print("Wednesday")
-else:
-    print("Tuesday")
+accumulate = 0
+numbers = 0
+for i in range(a, b + 1):
+    if i % 3 == 0:
+        accumulate += i
+        numbers += 1
+print(accumulate / numbers)
