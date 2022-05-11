@@ -1,10 +1,5 @@
-a = int(input())
-b = int(input())
+number = str(input())
+text_to_speech = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
-accumulate = 0
-numbers = 0
-for i in range(a, b + 1):
-    if i % 3 == 0:
-        accumulate += i
-        numbers += 1
-print(accumulate / numbers)
+for digit in number:
+    print(text_to_speech[int(digit)])
