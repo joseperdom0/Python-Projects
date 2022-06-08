@@ -3,9 +3,15 @@ import requests
 API_KEY = "fc5fc9e9867b9707e3adc54517440b8d"
 LAT = "43.653225"
 LONG = "-79.383186"
-url_api = "https://api.openweathermap.org/data/2.5/weather?lat="+LAT+"&lon="+LONG+"&appid="
+ENDPOINT = "https://api.openweathermap.org/data/2.5/onecall"
 
-api_response = requests.get(url= url_api+API_KEY)
+weather_params = {
+    "lat": LAT,
+    "lon": LONG,
+    "appid": API_KEY,
+}
 
-print(api_response)
+api_response = requests.get(ENDPOINT, params= weather_params)
+
+print(api_response.status_code)
 print(api_response.json())
