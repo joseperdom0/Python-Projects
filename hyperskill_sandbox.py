@@ -1,10 +1,10 @@
 # Save the input in this variable
-ticket = "090234"
+ticket = "999999"
 digits = [int(num) for num in str(ticket)]
 
 
 # Add up the digits for each half
-half1 = sum(digits[0:2])
+half1 = sum(digits[0:3])
 half2 = sum(digits[-3::])
 
 print(half1,half2)
