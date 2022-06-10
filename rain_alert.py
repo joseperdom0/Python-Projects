@@ -1,6 +1,7 @@
 import requests
+import os
 
-API_KEY = "fc5fc9e9867b9707e3adc54517440b8d"
+API_KEY = os.environ.get("API_KEY")
 LAT = "43.653225"
 LONG = "-79.383186"
 ENDPOINT = "https://api.openweathermap.org/data/2.5/onecall"
