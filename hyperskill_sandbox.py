@@ -1,4 +1,4 @@
-i = 1
-j = not not i
+x = 4
 
-print(j)
+c = ~x
+print(c)
