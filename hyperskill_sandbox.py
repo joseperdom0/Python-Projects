@@ -1,1 +1,4 @@
-print(round(2.675, 2))
+i = 1
+j = not not i
+
+print(j)
