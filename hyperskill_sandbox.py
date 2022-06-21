@@ -1,5 +1,3 @@
-var = 1
-while var < 10:
-    print(var)
-    print("#")
-    var = var << 1
+vals = [0, 1, 2]
+vals[0], vals[2] = vals[2], vals[0]
+print(vals)
