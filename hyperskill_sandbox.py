@@ -1,3 +1,4 @@
-vals = [0, 1, 2]
-vals[0], vals[2] = vals[2], vals[0]
-print(vals)
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+print(dictionary.keys())
+print(type(dictionary.keys()))
