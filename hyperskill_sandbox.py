@@ -1,10 +1,8 @@
-this_list = ['Mary', 'had', 'a', 'little', 'lamb']
+dictionary = {'one': 'two', 'three': 'one', 'two': 'three'}
 
+v = dictionary['one']
+print(v)
 
-def my_list(this_list):
-    del this_list[3]
-    this_list[3] = 'ram'
-
-
-print(my_list(this_list))
-print(this_list)
+for k in range(len(dictionary)):
+    v = dictionary[v]
+    print(v)
