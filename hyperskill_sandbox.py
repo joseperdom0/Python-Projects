@@ -1,8 +1,6 @@
-dictionary = {'one': 'two', 'three': 'one', 'two': 'three'}
+my_list = [4, 5]
 
-v = dictionary['one']
-print(v)
+for v in range(2):
+    my_list.insert(-1, my_list[v])
+    print(my_list)
 
-for k in range(len(dictionary)):
-    v = dictionary[v]
-    print(v)
