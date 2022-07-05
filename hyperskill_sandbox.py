@@ -1,8 +1,11 @@
-def runner(brand, model ="", year =2021, convertible = False):
-    var = (brand, str(year),str(convertible))
-    print(var)
-    print(type(var))
-    return(brand, str(year),str(convertible))
+def do_the_mess(parameter):
+    global variable
+    variable += parameter[0]
+    return variable
 
-print(runner("Fermi")[2][2])
 
+the_list = [x for x in range(2,3)]
+print(the_list)
+variable = 0
+do_the_mess(the_list)
+print(variable)
