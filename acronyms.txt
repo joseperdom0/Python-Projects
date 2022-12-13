@@ -1,3 +1,4 @@
+
 AD, Active Directory
 AD DS, Active Directory Domain Services
 DCC, Domain Cached Credentials
@@ -5,25 +6,32 @@ DC, Domain Controller
 DNS, Domain Name System
 DRS, Directory Replication Service
 FQDN, Fully Qualified Domain Name
+gMSA, Group Managed Service Accounts
+GPO, Group Policy Object
+IIS, Internet Information Services
 KDC, Key Distribution Center (Kerberos)
+LAPS, Microsoft Local Administration Password Solution
 LDAP, Lightweight Directory Access Protocol
 LDAPS, LDAP over SSL
 LM, LAN Manager
 LSA, Local Security Authority (RPC)
+LSASS, Local System Authority
 MSRPC, Microsoft Remote Procedure Call
 NTLM, New Technology LAN Manager
+RDP, Remote Desktop Protocol
 RPC, Remote Procedure Call
 RPC, Remote Procedure Call
 RSAM, Remote SAM
 SAM, Security Account Manager
 SASL, Simple Authentication and Security Layer
+SCCM, System Center Configuration Manager
 SCM, Service Control Manager
 SID, Security Identifier
 SRV, Service Records
 TGS, Ticket Granting Service
 TGT, Ticket Granting Ticket
-IIS, Internet Information Services
-WinRM, Windows Remote Management
-GPO, Group Policy Object
-LSASS, Local System Authority
 UAC, User Account Control
+WinRM, Windows Remote Management
+WSUS, Windows Server Update Server
+BITS, Background Intelligent Transfer Service
+
