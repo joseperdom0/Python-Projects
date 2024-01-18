@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e7c134-e6bc-4604-be10-f351b7ac1d97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/click_demo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/word_scrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/word_scrapper.py" afterDir="false" />
     </list>
@@ -39,7 +38,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.click_demo">
+  <component name="RunManager" selected="Python.word_scrapper">
     <configuration name="click_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,8 +104,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.click_demo" />
         <item itemvalue="Python.word_scrapper" />
+        <item itemvalue="Python.click_demo" />
         <item itemvalue="Python.db_loader" />
       </list>
     </recent_temporary>
