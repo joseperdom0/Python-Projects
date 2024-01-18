@@ -19,6 +19,8 @@ def count_occurrences_in(word_list, min_length):
     word_count = {}
 
     for word in word_list:
+        if len(word) < min_length:
+            continue
         if word not in word_count:
             word_count[word] = 1
         else:
