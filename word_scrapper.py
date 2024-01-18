@@ -38,4 +38,5 @@ for word in all_words:
 top_words = sorted(word_count.items(), key=lambda item: item[1], reverse=True)
 print(top_words)
 
+#TODO convert it into a function
 
